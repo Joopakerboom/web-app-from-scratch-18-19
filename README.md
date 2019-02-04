@@ -36,6 +36,26 @@ Doel: Data manipuleren. Code splitsen in modules. Reflecteren op eindresultaat.
 
 [Slides](https://drive.google.com/open?id=1BSzGYNLMgtHD4HRnK7f0DgyTv4Pg3xsQwD_eYNo7v0Y)
 
+### linkToLiveDemo ? review(assignment) : assignGrade(1);
+[Live demo](https://joopakerboom.github.io/web-app-from-scratch-18-19/week1/index.html)
+
+### Wat doet jou app, wat is het doel? (passing butter)
+
+
+### Welke actoren zitten er in jouw applicatie? (actor diagram)
+
+
+### Welke API wordt gebruikt en wat zijn de beperkingen? (rate limit)
+
+
+### Hoe flowed interactie door de applicatie? (interaction diagram)
+
+
+### Welke design patterns en best practices
+
+
+### Wat zou je nog willen toevoegen (feature wishlist / backlog)
+
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
