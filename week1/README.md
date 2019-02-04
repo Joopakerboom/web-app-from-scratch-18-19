@@ -7,7 +7,7 @@ Doel: Data ophalen uit een API en renderen in een overzichtspagina.
 [Slides](https://drive.google.com/open?id=1Rjl9xqXoKniQSRJPdkU1O5YwWC33SJK8KiV0a-H_xZU)
 
 # linkToLiveDemo ? review(assignment) : assignGrade(1);
-[Link] (https://joopakerboom.github.io/web-app-from-scratch-18-19/week1/index.html)
+[Live demo](https://joopakerboom.github.io/web-app-from-scratch-18-19/week1/index.html)
 
 # Wat doet jou app, wat is het doel? (passing butter)
 
