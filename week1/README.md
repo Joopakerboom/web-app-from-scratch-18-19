@@ -9,20 +9,4 @@ Doel: Data ophalen uit een API en renderen in een overzichtspagina.
 # linkToLiveDemo ? review(assignment) : assignGrade(1);
 [Live demo](https://joopakerboom.github.io/web-app-from-scratch-18-19/week1/index.html)
 
-# Wat doet jou app, wat is het doel? (passing butter)
-
-
-# Welke actoren zitten er in jouw applicatie? (actor diagram)
-
-
-# Welke API wordt gebruikt en wat zijn de beperkingen? (rate limit)
-
-
-# Hoe flowed interactie door de applicatie? (interaction diagram)
-
-
-# Welke design patterns en best practices
-
-
-# Wat zou je nog willen toevoegen (feature wishlist / backlog)
 
