@@ -72,6 +72,16 @@ function render(data) {
                 <img src="${pokemon.sprites.front_default}">
                 <h2>${pokemon.name}</h2>
            `
+            if (pokemon.types[1]){
+                pokeBall.innerHTML += `
+                <h3 class="${pokemon.types[0].type.name}">${pokemon.types[0].type.name}</h3>
+                <h3 class="${pokemon.types[1].type.name}">${pokemon.types[1].type.name}</h3>
+ `
+            } else {
+                pokeBall.innerHTML += `
+                <h3 class="${pokemon.types[0].type.name}">${pokemon.types[0].type.name}</h3>
+ `
+            }
         }
         
     }
