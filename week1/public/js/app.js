@@ -14,6 +14,7 @@
 //// Api data opvragen
 //request.send();
 
+
 function getData(url, cb){
     // Get request aanmaken
     var request = new XMLHttpRequest();
@@ -58,7 +59,6 @@ function render(data) {
     
     function renderAll(all) {
         var pokeBall = document.querySelector("#app");
-        console.log(all)
         
         // mdn array prototype sort
         all = all.sort(function(a, b){
@@ -68,27 +68,39 @@ function render(data) {
         //Template string
         for (var i = 0; i < all.length; i++){
             var pokemon = all[i];
-            pokeBall.innerHTML += `
-                <img src="${pokemon.sprites.front_default}">
-                <h2>${pokemon.name}</h2>
-           `
-            if (pokemon.types[1]){
-                pokeBall.innerHTML += `
-                <h3 class="${pokemon.types[0].type.name}">${pokemon.types[0].type.name}</h3>
-                <h3 class="${pokemon.types[1].type.name}">${pokemon.types[1].type.name}</h3>
- `
+            var secondType;
+            console.log(pokemon)
+            if (pokemon.types[1]) {
+                secondType = `<h3 class="${pokemon.types[1].type.name  + 'circle'}">${pokemon.types[1].type.name}</h3>`;
             } else {
-                pokeBall.innerHTML += `
-                <h3 class="${pokemon.types[0].type.name}">${pokemon.types[0].type.name}</h3>
- `
+                secondType = '';
             }
+            pokeBall.innerHTML += `
+                <article>
+                    <h2 class="${pokemon.types[0].type.name}"><span>${'#' + pokemon.id}</span>${pokemon.name}</h2>                
+                    <h3 class="${pokemon.types[0].type.name + 'circle'} ">${pokemon.types[0].type.name}</h3>
+                    ${secondType}
+                    <img src="${pokemon.sprites.front_default}">
+                </article>
+                `
         }
         
     }
 }
 
 
+//vuur laad van data op begin van pagina 
+getData('https://pokeapi.co/api/v2/pokemon?limit=10', render)
 
-getData('https://pokeapi.co/api/v2/pokemon?limit=20', render)
+
+var offsetButtons = document.querySelectorAll("footer button");
+
+for (var i = 0; i < offsetButtons.length; i++){
+    offsetButtons[i].addEventListener('click', function(e){
+        document.querySelector("#app").innerHTML = '';
+        getData('https://pokeapi.co/api/v2/pokemon?limit=10&offset='+e.target.dataset.offset, render)
+    })
+}
+
 
 

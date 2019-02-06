@@ -47,37 +47,164 @@ table {
 	border-spacing: 0;
 }
 
-h2 {text-transform: uppercase;
+* {
+    box-sizing: border-box;
+}
+body { background-color: #F0F0F0;
+}
+
+h1 {font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1rem; 
+    display: inline;
+}
+
+
+main {
+    width: 100vw;
+    padding: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    grid-row-gap: 2rem;
+    position: relative;
+    z-index: -10;
+}
+
+main > article {
+    border-radius: 1rem;
+    background-color: white;
+    padding: 2rem;
+    display: inline-block;
+    position: relative;
+}
+
+main > article > h2 > span {
+    display: block;
+    font-size: 1rem;
+}
+
+main > article > img {
+    width: 10rem;
+    image-rendering: pixelated;
+    position: absolute;
+    right: 2rem;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+main > article > h3 {
+    color: #A0A8B2;
+position: relative;
+padding-left: 1rem;
+    margin-right: 1rem;
+}
+
+main > article > h3:before {
+    content: '';
+    position: absolute;
+    height: 0.5rem;
+    width: 0.5rem;
+    left: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    border-radius: 100%;
 }
 
 .normal {
+    color: #A8A878;
+}
+
+.normalcircle:before {
     background-color: #A8A878;
 }
 
 .fire {
-    background-color: #F08030;
+   color: #B22E2F;
+}
+
+.firecircle:before {
+    background-color: #B22E2F;
 }
 
 .water {
-   background-color: #6890F0;
+   color: #6890F0;
+}
+
+.watercircle:before {
+    background-color: #6890F0;
 }
 
 .grass {
-    background-color: #79C850;
+    color: #89A59E;
+}
+
+.grasscircle:before {
+    background-color: #89A59E;
 }
 
 .electric {
+    color: #F8CF30;
+}
+
+.electriccircle:before {
     background-color: #F8CF30;
 }
 
 .flying {
+    color: #A890F0;
+}
+
+.flyingcircle:before {
     background-color: #A890F0;
 }
 
 .poison {
+    color: #A040A0;
+}
+
+.poisoncircle:before {
     background-color: #A040A0;
 }
 
 .bug {
+    color: #A8B71F;
+}
+
+.bugcircle:before {
     background-color: #A8B71F;
+}
+
+footer {
+    width: 100vw;
+    height: 5rem;
+    padding: 1rem 5rem;
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+   background-color: #F0F0F0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+footer > button {
+    background-color: transparent;
+    border: none;
+    color: #A0A8B2;
 }
